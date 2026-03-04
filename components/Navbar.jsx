@@ -58,7 +58,7 @@ export default function Navbar() {
                     <div className="w-[38px] h-[38px] bg-gradient-to-br from-accent-yellow to-accent-orange rounded-[10px] flex items-center justify-center text-[#111]">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
                     </div>
-                    SARDA <span className="text-accent-yellow">INDUSTRIES</span>
+                    SARDA SAFETY <span className="text-accent-yellow">INDUSTRIES</span>
                 </Link>
 
                 <ul className="hidden lg:flex items-center gap-7">
