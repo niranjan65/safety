@@ -213,7 +213,7 @@ export default function ProductPage() {
                             {/* Size selector */}
                             <div className="mb-6">
                                 <div className="flex items-center justify-between mb-3">
-                                    <span className="text-sm font-semibold">Size</span>
+                                    <span className="text-sm font-semibold">Size{product.sizeUnit ? ` (${product.sizeUnit})` : ''}</span>
                                     <button className="text-xs text-accent-yellow hover:underline cursor-pointer">Size Guide</button>
                                 </div>
                                 <div className="flex flex-wrap gap-2">

@@ -28,6 +28,7 @@ export default function EditProduct({ params }) {
         description: '',
         badge: 'none',
         sizes: '',
+        sizeUnit: '',
         applications: '',
         images: []
     })
@@ -64,6 +65,7 @@ export default function EditProduct({ params }) {
                     description: product.description || '',
                     badge: product.badge || 'none',
                     sizes: Array.isArray(product.sizes) ? product.sizes.join(', ') : '',
+                    sizeUnit: product.sizeUnit || '',
                     applications: Array.isArray(product.applications) ? product.applications.join('\n') : '',
                     images: product.images || []
                 })
@@ -443,6 +445,18 @@ export default function EditProduct({ params }) {
                                     placeholder="e.g. S, M, L, XL"
                                 />
                                 <p className="text-xs text-text-muted mt-1">Comma separated</p>
+                            </div>
+
+                            <div>
+                                <label className="block text-sm font-semibold text-text-secondary mb-2">Size Unit</label>
+                                <input
+                                    type="text"
+                                    value={formData.sizeUnit}
+                                    onChange={(e) => setFormData({ ...formData, sizeUnit: e.target.value })}
+                                    className="w-full px-4 py-3 bg-[#111] border border-border-glass rounded-xl text-text-primary outline-none focus:border-accent-yellow transition-colors"
+                                    placeholder="e.g. inches, mm, UK, EU"
+                                />
+                                <p className="text-xs text-text-muted mt-1">Unit for the sizes above</p>
                             </div>
 
                             <div>
