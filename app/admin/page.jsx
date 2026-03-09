@@ -74,6 +74,12 @@ export default function AdminDashboard() {
                         + Add New Product
                     </Link>
                     <Link
+                        href="/admin/categories"
+                        className="px-6 py-3 rounded-xl bg-accent-yellow text-[#111] font-bold hover:bg-accent-yellow-hover transition-colors"
+                    >
+                        + Add New Category
+                    </Link>
+                    <Link
                         href="/admin/products"
                         className="px-6 py-3 rounded-xl border border-border-glass hover:bg-white/[0.04] transition-colors font-medium text-text-primary"
                     >
