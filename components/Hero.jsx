@@ -29,14 +29,14 @@ export default function Hero() {
 
                     <ScrollReveal delay={100}>
                         <h1 className="text-[clamp(2.5rem,5.5vw,4.2rem)] font-black mb-5 bg-gradient-to-br from-text-primary from-60% to-accent-yellow bg-clip-text text-transparent leading-[1.1]">
-                            Industrial Safety Equipment You Can Trust.
+                            Safety Shoes, Gloves & Industrial Safety Equipment You Can Trust.
                         </h1>
                     </ScrollReveal>
 
                     <ScrollReveal delay={200}>
                         <p className="text-lg text-text-secondary mb-9 max-w-[520px] leading-relaxed">
-                            Leading manufacturer & supplier of PPE solutions — Hand protection, Safety helmets, Reflective jackets & more.
-                            Serving Oil & Gas, EPC, Infrastructure & Government sectors across India.
+                            Leading manufacturer & supplier of safety shoes, safety gloves, rubber gloves, safety gumboots, traffic safety products & industrial safety equipment.
+                            Serving Oil & Gas, EPC, Infrastructure & Government sectors across India from Kolkata.
                         </p>
                     </ScrollReveal>
 
