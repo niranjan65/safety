@@ -20,10 +20,12 @@ export async function POST(request) {
         const newQuote = new QuoteRequest(body)
         const savedQuote = await newQuote.save()
 
-        // Send email notification (non-blocking — don't fail if email fails)
-        sendQuoteEmail(body).catch(err => {
-            console.error('Email send error (non-blocking):', err.message)
-        })
+        // Send email notification (await so Vercel doesn't exit before email is sent)
+        try {
+            await sendQuoteEmail(body)
+        } catch (emailErr) {
+            console.error('Email send error:', emailErr.message)
+        }
 
         return NextResponse.json({ message: 'Quotation request submitted successfully', quoteId: savedQuote._id }, { status: 201 })
     } catch (error) {
