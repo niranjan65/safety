@@ -50,6 +50,7 @@ export default function ProductPage() {
     // RFQ Modal state
     const [showRfqModal, setShowRfqModal] = useState(false)
     const [rfqLoading, setRfqLoading] = useState(false)
+    const [rfqError, setRfqError] = useState('')
     const [rfqForm, setRfqForm] = useState({ customerName: '', email: '', phone: '', message: '' })
 
     useEffect(() => {
@@ -80,8 +81,9 @@ export default function ProductPage() {
     const handleRFQ = async (e) => {
         e.preventDefault()
         setRfqLoading(true)
+        setRfqError('')
         try {
-            await fetch('/api/quotes', {
+            const res = await fetch('/api/quotes', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -95,11 +97,17 @@ export default function ProductPage() {
                     message: rfqForm.message || `RFQ for ${product.name}, Size: ${selectedSize}, Qty: ${qty}`,
                 }),
             })
+            if (!res.ok) {
+                const data = await res.json().catch(() => ({}))
+                throw new Error(data.message || 'Failed to submit request')
+            }
             setRfqSent(true)
             setShowRfqModal(false)
             setRfqForm({ customerName: '', email: '', phone: '', message: '' })
-            setTimeout(() => setRfqSent(false), 3000)
-        } catch (e) { /* silent fail */ }
+            setTimeout(() => setRfqSent(false), 4000)
+        } catch (err) {
+            setRfqError(err.message || 'Something went wrong. Please try again.')
+        }
         setRfqLoading(false)
     }
 
@@ -463,6 +471,13 @@ export default function ProductPage() {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Error Message */}
+                            {rfqError && (
+                                <div className="mx-6 mt-3 p-3 bg-red-500/10 border border-red-500/30 rounded-xl">
+                                    <p className="text-red-400 text-sm font-medium">❌ {rfqError}</p>
+                                </div>
+                            )}
 
                             {/* Form */}
                             <form onSubmit={handleRFQ} className="p-6 pt-3 space-y-4">
