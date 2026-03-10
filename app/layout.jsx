@@ -2,7 +2,7 @@ import './globals.css'
 import LayoutShell from '../components/LayoutShell'
 
 export const metadata = {
-    metadataBase: new URL('https://sardasafetyindustries.com'),
+    metadataBase: new URL('https://www.sardasafetyindustries.com'),
     title: {
         default: 'Sarda Safety Industries | Safety Shoes, Gloves & Industrial Safety Products Supplier in Kolkata, India',
         template: '%s | Sarda Safety Industries',
@@ -33,7 +33,7 @@ export const metadata = {
     openGraph: {
         type: 'website',
         locale: 'en_IN',
-        url: 'https://sardasafetyindustries.com',
+        url: 'https://www.sardasafetyindustries.com',
         siteName: 'Sarda Safety Industries',
         title: 'Sarda Safety Industries | Safety Shoes, Gloves & Industrial Safety Products — Kolkata, India',
         description:
@@ -55,7 +55,7 @@ export const metadata = {
         images: ['/images/hero-banner.png'],
     },
     alternates: {
-        canonical: 'https://sardasafetyindustries.com',
+        canonical: 'https://www.sardasafetyindustries.com',
     },
     robots: {
         index: true,
@@ -79,8 +79,8 @@ const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Sarda Safety Industries',
-    url: 'https://sardasafetyindustries.com',
-    logo: 'https://sardasafetyindustries.com/images/hero-banner.png',
+    url: 'https://www.sardasafetyindustries.com',
+    logo: 'https://www.sardasafetyindustries.com/images/hero-banner.png',
     description:
         'Leading manufacturer & supplier of safety shoes, safety gloves, rubber gloves, safety gumboots, industrial safety equipment, and traffic safety products in Kolkata, India.',
     foundingDate: '1990',
@@ -114,8 +114,8 @@ const localBusinessJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Sarda Safety Industries',
-    url: 'https://sardasafetyindustries.com',
-    image: 'https://sardasafetyindustries.com/images/hero-banner.png',
+    url: 'https://www.sardasafetyindustries.com',
+    image: 'https://www.sardasafetyindustries.com/images/hero-banner.png',
     description:
         'Manufacturer & supplier of safety shoes, safety gloves, rubber gloves, gumboots & industrial safety products in Kolkata, India.',
     address: {

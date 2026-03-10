@@ -1,4 +1,4 @@
-const BASE_URL = 'https://sardasafetyindustries.com'
+const BASE_URL = 'https://www.sardasafetyindustries.com'
 
 export default function sitemap() {
     const staticPages = [

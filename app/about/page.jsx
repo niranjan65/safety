@@ -11,13 +11,13 @@ export const metadata = {
         'safety equipment company kolkata',
     ],
     alternates: {
-        canonical: 'https://sardasafetyindustries.com/about',
+        canonical: 'https://www.sardasafetyindustries.com/about',
     },
     openGraph: {
         title: 'About Sarda Safety Industries — Safety Products Supplier Since 1990',
         description:
             'Trusted manufacturer & supplier of industrial safety products in Kolkata, India. Safety shoes, gloves, gumboots & more.',
-        url: 'https://sardasafetyindustries.com/about',
+        url: 'https://www.sardasafetyindustries.com/about',
     },
 }
 

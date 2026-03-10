@@ -51,13 +51,13 @@ export async function generateMetadata({ params }) {
         keywords: seoData?.keywords ||
             `${title.toLowerCase()}, safety products, industrial safety, supplier india, kolkata`,
         alternates: {
-            canonical: `https://sardasafetyindustries.com/product/${slug}`,
+            canonical: `https://www.sardasafetyindustries.com/product/${slug}`,
         },
         openGraph: {
             title: `${title} — Sarda Safety Industries`,
             description: seoData?.desc ||
                 `Buy ${title} from Sarda Safety Industries, Kolkata. Premium industrial safety products supplier.`,
-            url: `https://sardasafetyindustries.com/product/${slug}`,
+            url: `https://www.sardasafetyindustries.com/product/${slug}`,
             type: 'website',
         },
     }

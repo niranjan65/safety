@@ -7,6 +7,6 @@ export default function robots() {
                 disallow: ['/admin/', '/api/'],
             },
         ],
-        sitemap: 'https://sardasafetyindustries.com/sitemap.xml',
+        sitemap: 'https://www.sardasafetyindustries.com/sitemap.xml',
     }
 }
