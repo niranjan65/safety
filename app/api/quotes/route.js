@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import dbConnect from '../../../lib/mongodb'
 import QuoteRequest from '../../../lib/models/QuoteRequest'
+import { sendQuoteEmail } from '../../../lib/email'
 
 export async function POST(request) {
     try {
@@ -15,8 +16,14 @@ export async function POST(request) {
             )
         }
 
+        // Save to database
         const newQuote = new QuoteRequest(body)
         const savedQuote = await newQuote.save()
+
+        // Send email notification (non-blocking — don't fail if email fails)
+        sendQuoteEmail(body).catch(err => {
+            console.error('Email send error (non-blocking):', err.message)
+        })
 
         return NextResponse.json({ message: 'Quotation request submitted successfully', quoteId: savedQuote._id }, { status: 201 })
     } catch (error) {
