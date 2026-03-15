@@ -145,7 +145,7 @@ export default function RootLayout({ children }) {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
                 />
             </head>
-            <body className="antialiased font-sans">
+            <body className="antialiased font-sans overflow-x-hidden">
                 <LayoutShell>{children}</LayoutShell>
             </body>
         </html>

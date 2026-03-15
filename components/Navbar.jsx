@@ -51,14 +51,17 @@ export default function Navbar() {
       ${scrolled
                 ? 'bg-[rgba(17,17,19,0.92)] backdrop-blur-2xl py-2.5 shadow-[0_2px_20px_rgba(0,0,0,0.5)]'
                 : 'bg-transparent py-4'}`}>
-            <div className="max-w-[1280px] mx-auto px-6 flex items-center justify-between gap-5">
+            <div className="max-w-[1280px] mx-auto px-4 sm:px-6 flex items-center justify-between gap-3 sm:gap-5">
 
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2.5 font-[Outfit] font-black text-2xl text-text-primary shrink-0">
-                    <div className="w-[38px] h-[38px] bg-gradient-to-br from-accent-yellow to-accent-orange rounded-[10px] flex items-center justify-center text-[#111]">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                <Link href="/" className="flex items-center gap-2 sm:gap-2.5 font-[Outfit] font-black text-lg sm:text-xl md:text-2xl text-text-primary shrink-0">
+                    <div className="w-[32px] h-[32px] sm:w-[38px] sm:h-[38px] bg-gradient-to-br from-accent-yellow to-accent-orange rounded-[10px] shrink-0 flex items-center justify-center text-[#111]">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-[16px] h-[16px] sm:w-[20px] sm:h-[20px]"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
                     </div>
-                    SARDA SAFETY <span className="text-accent-yellow">INDUSTRIES</span>
+                    <div className="flex flex-col sm:flex-row sm:gap-1.5 leading-[1.1] sm:leading-tight">
+                        <span>SARDA SAFETY</span>
+                        <span className="text-accent-yellow text-sm sm:text-[inherit]">INDUSTRIES</span>
+                    </div>
                 </Link>
 
                 <ul className="hidden lg:flex items-center gap-7">

@@ -22,13 +22,13 @@ export default function Hero() {
             <div className="relative z-10 max-w-[1280px] mx-auto px-6 py-[120px]">
                 <div className="max-w-[680px]">
                     <ScrollReveal>
-                        <span className="inline-block text-xs font-bold tracking-[3px] uppercase text-accent-yellow mb-5">
+                        <span className="inline-block text-[10px] sm:text-xs font-bold tracking-[1px] sm:tracking-[3px] uppercase text-accent-yellow mb-5">
                             🛡️ Where Safety Meets Strength — Since 1990
                         </span>
                     </ScrollReveal>
 
                     <ScrollReveal delay={100}>
-                        <h1 className="text-[clamp(2.5rem,5.5vw,4.2rem)] font-black mb-5 bg-gradient-to-br from-text-primary from-60% to-accent-yellow bg-clip-text text-transparent leading-[1.1]">
+                        <h1 className="text-[clamp(2rem,5.5vw,4.2rem)] font-black mb-5 bg-gradient-to-br from-text-primary from-60% to-accent-yellow bg-clip-text text-transparent leading-[1.1]">
                             Safety Shoes, Gloves & Industrial Safety Equipment You Can Trust.
                         </h1>
                     </ScrollReveal>
